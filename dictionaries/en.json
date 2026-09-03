@@ -1,0 +1,69 @@
+{
+  "nav": { "home": "Home", "products": "Products", "cart": "Cart", "contact": "Contact" },
+  "hero": {
+    "eyebrow": "Handmade with love",
+    "title1": "Every piece is...",
+    "title2": "Wanas",
+    "subtitle": "Handmade decor and accessories, crafted with love — a chic, cute touch that warms up your world.",
+    "cta": "Shop the collection",
+    "ctaCustom": "Order a custom piece"
+  },
+  "categories": { "eyebrow": "Shop by category", "title": "Shop by Category", "subtitle": "Everything you need, made by hand" },
+  "why": {
+    "eyebrow": "Why wanas",
+    "title": "Why Wanas?",
+    "items": [
+      { "title": "Fully handmade", "text": "Every piece is shaped and painted by hand — no two pieces are exactly alike." },
+      { "title": "Distinctive design", "text": "A chic yet cute style that fits any decor, from classic to modern." },
+      { "title": "Made just for you", "text": "Want a special word on the piece or custom piece? We offer custom orders for any occasion." }
+    ]
+  },
+  "products": {
+    "title": "Products",
+    "bestsellers": "Bestsellers",
+    "empty": "No products added yet",
+    "addToCart": "Add to cart",
+    "all": "All"
+  },
+  "product": { "back": "Back to products", "description": "Description", "addToCart": "Add to cart", "addedToCart": "Added to cart" },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Browse products",
+    "subtotal": "Subtotal",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "qty": "Qty"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "name": "Full name",
+    "phone": "Phone number",
+    "address": "Detailed address",
+    "shippingZone": "Shipping zone",
+    "selectZone": "Select your zone",
+    "paymentMethod": "Payment method",
+    "cod": "Cash on delivery",
+    "vodafoneCash": "Vodafone Cash",
+    "instapay": "InstaPay",
+    "vodafoneNote": "Transfer the total to this Vodafone Cash number:",
+    "instapayNote": "Transfer the total to this InstaPay account:",
+    "confirmNote": "Please send a payment screenshot on WhatsApp to confirm your order",
+    "subtotal": "Items",
+    "shipping": "Shipping",
+    "total": "Total",
+    "placeOrder": "Place order",
+    "placing": "Placing your order...",
+    "successTitle": "Order received!",
+    "successText": "Your order number is",
+    "successNote": "We'll reach out soon to confirm the details",
+    "backHome": "Back to home"
+  },
+  "footer": {
+    "tagline": "Handmade decor and accessories with a chic, cute touch.",
+    "follow": "Follow us",
+    "contact": "Contact us",
+    "whatsapp": "WhatsApp",
+    "rights": "All rights reserved"
+  }
+}
