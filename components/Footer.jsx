@@ -18,8 +18,8 @@ export default function Footer() {
         <div className="footer-col">
           <h4>{t.footer.follow}</h4>
           <div className="social-row">
-            <a className="social-circle" href="#" target="_blank" rel="noreferrer"><FaInstagram/></a>
-            <a className="social-circle" href="#" target="_blank" rel="noreferrer"><FaFacebook/></a>
+            <a className="social-circle" href="https://www.instagram.com/wanas5487/" target="_blank" rel="noreferrer"><FaInstagram/></a>
+            <a className="social-circle" href="https://www.facebook.com/share/1DLK7nLuJc/" target="_blank" rel="noreferrer"><FaFacebook/></a>
             {/* <a className="social-circle" href="#" target="_blank" rel="noreferrer">TT</a> */}
           </div>
         </div>

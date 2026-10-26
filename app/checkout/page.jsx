@@ -214,7 +214,9 @@ export default function CheckoutPage() {
         )}
         {paymentMethod === 'instapay' && (
           <div className="payment-note">
-            {t.checkout.instapayNote} <strong>{INSTAPAY_HANDLE}</strong><br />{t.checkout.confirmNote}
+            {t.checkout.instapayNote} <strong>
+              <a href={`${INSTAPAY_HANDLE}`} target="_blank" rel="noreferrer">{INSTAPAY_HANDLE}</a>
+              </strong><br />{t.checkout.confirmNote}
           </div>
         )}
 
