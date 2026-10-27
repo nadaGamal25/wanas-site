@@ -80,40 +80,24 @@ export default function CheckoutPage() {
     }
     setSubmitting(true)
 
-    const { data: order, error } = await supabase
-      .from('orders')
-      .insert({
-        customer_id: session?.user?.id || null,
-        customer_name: name,
-        phone,
-        governorate,
-        address,
-        shipping_zone_id: zoneId,
-        payment_method: paymentMethod,
-        subtotal,
-        shipping_cost: shippingCost,
-        total,
-      })
-      .select()
-      .single()
+    // الطلب بيتسجل عن طريق دالة آمنة في الداتابيز (بتحسب الأسعار والشحن من عندها)
+    const { data: newOrderNumber, error } = await supabase.rpc('place_order', {
+      p_customer_name: name,
+      p_phone: phone,
+      p_governorate: governorate,
+      p_address: address,
+      p_shipping_zone_id: zoneId,
+      p_payment_method: paymentMethod,
+      p_items: items.map((i) => ({ product_id: i.id, quantity: i.qty })),
+    })
 
-    if (error || !order) {
+    if (error || !newOrderNumber) {
       setSubmitting(false)
-      alert('حصل خطأ في إرسال الطلب، حاولي تاني')
+      alert(locale === 'ar' ? 'حصل خطأ في إرسال الطلب، حاولي تاني' : 'Something went wrong placing your order, please try again')
       return
     }
 
-    const orderItems = items.map((i) => ({
-      order_id: order.id,
-      product_id: i.id,
-      product_name_ar: i.name_ar,
-      product_name_en: i.name_en,
-      unit_price: i.price,
-      quantity: i.qty,
-    }))
-    await supabase.from('order_items').insert(orderItems)
-
-    setOrderNumber(order.order_number)
+    setOrderNumber(newOrderNumber)
     clearCart()
     setSubmitting(false)
   }
